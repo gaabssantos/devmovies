@@ -11,7 +11,6 @@ export const Container = styled.div`
 
     & li {
       display: flex;
-      padding: 8px;
       align-items: center;
     }
   }

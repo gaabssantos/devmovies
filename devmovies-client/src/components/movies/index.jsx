@@ -31,16 +31,6 @@ export const Movies = () => {
         <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
-      </Carousel>
-
-      <C.Text>Movies</C.Text>
-      <Carousel responsive={responsive}>
-        <C.Movie src={image} alt="imagem do filme" />
-        <C.Movie src={image} alt="imagem do filme" />
-        <C.Movie src={image} alt="imagem do filme" />
-        <C.Movie src={image} alt="imagem do filme" />
-        <C.Movie src={image} alt="imagem do filme" />
-        <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
@@ -48,6 +38,22 @@ export const Movies = () => {
 
       <C.Text>Movies</C.Text>
       <Carousel responsive={responsive}>
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
+      </Carousel>
+
+      <C.Text>Movies</C.Text>
+      <Carousel responsive={responsive}>
+        <C.Movie src={image} alt="imagem do filme" />
+        <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
         <C.Movie src={image} alt="imagem do filme" />
