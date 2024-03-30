@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 20px 60px;
 
+  @media (max-width: 560px) {
+    padding: 20px;
+  }
+
   .react-multi-carousel-list {
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.14);

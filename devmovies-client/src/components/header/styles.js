@@ -7,6 +7,10 @@ export const Container = styled.header`
   justify-content: space-between;
   padding: 20px 0;
 
+  @media (max-width: 560px) {
+    padding: 20px;
+  }
+
   nav {
     padding: 0 60px;
     display: flex;
@@ -23,6 +27,10 @@ export const Container = styled.header`
     text-decoration: none;
     position: relative;
     padding-bottom: 5px;
+
+    @media (max-width: 560px) {
+      font-size: 16px;
+    }
   }
 
   a:hover {
@@ -42,5 +50,11 @@ export const Container = styled.header`
 
   a:hover::after {
     width: 100%;
+  }
+
+  img {
+    @media (max-width: 560px) {
+      width: 80px;
+    }
   }
 `;
