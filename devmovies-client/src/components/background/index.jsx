@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 
-import backgroundImage from '../../assets/background.svg';
 import { BackgroundImage, BackgroundGradient } from './styles';
 
-export const Background = ({ children }) => {
+export const Background = ({ children, imageBanner }) => {
   return (
-    <BackgroundImage bgImage={backgroundImage}>
+    <BackgroundImage bgImage={imageBanner}>
       <BackgroundGradient>{children}</BackgroundGradient>
     </BackgroundImage>
   );
@@ -13,4 +12,5 @@ export const Background = ({ children }) => {
 
 Background.propTypes = {
   children: PropTypes.node,
+  imageBanner: PropTypes.string,
 };

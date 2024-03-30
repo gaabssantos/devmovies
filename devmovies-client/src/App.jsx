@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { apiData } from './api/data';
 import { Background } from './components/background';
 import { Description } from './components/description';
 import { Header } from './components/header';
@@ -7,19 +8,27 @@ import { Movies } from './components/movies';
 import { Video } from './components/video';
 
 function App() {
+  const [video, setVideo] = useState(apiData?.movies[0]);
   const [playVideo, setPlayVideo] = useState(false);
+
+  const { title, description, linkVideo, imageBanner } = video;
 
   const handleOpenPlayVideo = () => setPlayVideo(true);
   const handleClosePlayVideo = () => setPlayVideo(false);
 
   return (
-    <Background>
+    <Background imageBanner={imageBanner}>
       <Header />
-      <Description handleOpenPlayVideo={handleOpenPlayVideo} />
-      <Movies />
+      <Description
+        title={title}
+        description={description}
+        handleOpenPlayVideo={handleOpenPlayVideo}
+      />
+      <Movies data={apiData} />
       <Video
         playVideo={playVideo}
         handleClosePlayVideo={handleClosePlayVideo}
+        linkVideo={linkVideo}
       />
     </Background>
   );

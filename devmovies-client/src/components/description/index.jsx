@@ -3,15 +3,11 @@ import { BsPlayFill } from 'react-icons/bs';
 
 import * as C from './styles';
 
-export const Description = ({ handleOpenPlayVideo }) => {
+export const Description = ({ title, description, handleOpenPlayVideo }) => {
   return (
     <C.Container>
-      <C.Title>STAR WARS THE RISE OF SKYWALKER</C.Title>
-      <C.Description>
-        The surviving members of the resistance face the First Order once again,
-        and the legendary conflict between the Jedi and the Sith reaches its
-        peak bringing the Skywalker saga to its end.{' '}
-      </C.Description>
+      <C.Title>{title}</C.Title>
+      <C.Description>{description}</C.Description>
       <C.Button onClick={handleOpenPlayVideo}>
         <BsPlayFill /> Watch Now
       </C.Button>
@@ -20,5 +16,7 @@ export const Description = ({ handleOpenPlayVideo }) => {
 };
 
 Description.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
   handleOpenPlayVideo: PropTypes.func,
 };

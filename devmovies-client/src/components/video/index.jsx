@@ -4,7 +4,7 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 import * as C from './styles';
 
-export const Video = ({ playVideo, handleClosePlayVideo }) => {
+export const Video = ({ playVideo, linkVideo, handleClosePlayVideo }) => {
   return (
     playVideo && (
       <C.Container>
@@ -14,7 +14,7 @@ export const Video = ({ playVideo, handleClosePlayVideo }) => {
         </C.Button>
 
         <Player controls>
-          <Youtube videoId="HluMG9tJXHM" />
+          <Youtube videoId={linkVideo} />
         </Player>
       </C.Container>
     )
@@ -23,5 +23,6 @@ export const Video = ({ playVideo, handleClosePlayVideo }) => {
 
 Video.propTypes = {
   playVideo: PropTypes.bool,
+  linkVideo: PropTypes.string,
   handleClosePlayVideo: PropTypes.func,
 };
