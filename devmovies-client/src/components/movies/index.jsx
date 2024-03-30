@@ -3,10 +3,9 @@ import Carousel from 'react-multi-carousel';
 
 import 'react-multi-carousel/lib/styles.css';
 
-import image from '../../assets/image.svg';
 import * as C from './styles';
 
-export const Movies = ({ data }) => {
+export const Movies = ({ data, handleVideo }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -30,19 +29,31 @@ export const Movies = ({ data }) => {
     <C.Container>
       {data?.categories?.map((category) => (
         <>
-          <C.Text>{category?.name}</C.Text>
+          <C.Text key={category?.name} id={category?.type}>
+            {category?.name}
+          </C.Text>
           <Carousel responsive={responsive}>
             {getMovies(category?.type).map((data, index) => (
-              <C.Movie key={index} src={data?.imageSmall} alt={data?.title} />
+              <C.Movie
+                key={index}
+                src={data?.imageSmall}
+                alt={data?.title}
+                onClick={() => handleVideo(data)}
+              />
             ))}
           </Carousel>
         </>
       ))}
 
-      <C.Text>All</C.Text>
+      <C.Text id="all">All</C.Text>
       <Carousel responsive={responsive}>
         {data?.movies.map((data, index) => (
-          <C.Movie key={index} src={data?.imageSmall} alt={data?.title} />
+          <C.Movie
+            key={index}
+            src={data?.imageSmall}
+            alt={data?.title}
+            onClick={() => handleVideo(data)}
+          />
         ))}
       </Carousel>
     </C.Container>
@@ -51,4 +62,5 @@ export const Movies = ({ data }) => {
 
 Movies.propTypes = {
   data: PropTypes.array,
+  handleVideo: PropTypes.func,
 };

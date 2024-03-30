@@ -16,6 +16,11 @@ function App() {
   const handleOpenPlayVideo = () => setPlayVideo(true);
   const handleClosePlayVideo = () => setPlayVideo(false);
 
+  const handleVideo = (data) => {
+    setVideo(data);
+    window.scrollTo({ top: 0 });
+  };
+
   return (
     <Background imageBanner={imageBanner}>
       <Header />
@@ -24,7 +29,7 @@ function App() {
         description={description}
         handleOpenPlayVideo={handleOpenPlayVideo}
       />
-      <Movies data={apiData} />
+      <Movies data={apiData} handleVideo={(data) => handleVideo(data)} />
       <Video
         playVideo={playVideo}
         handleClosePlayVideo={handleClosePlayVideo}

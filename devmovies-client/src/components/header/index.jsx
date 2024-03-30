@@ -6,9 +6,9 @@ export const Header = () => {
     <Container>
       <img src={logoImage} alt="logo" />
       <nav>
-        <a href="#">Movies</a>
-        <a href="">Tv Shows</a>
-        <a href="">All</a>
+        <a href="#movies">Movies</a>
+        <a href="#tvShows">Tv Shows</a>
+        <a href="#all">All</a>
       </nav>
     </Container>
   );
