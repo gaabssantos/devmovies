@@ -10,6 +10,7 @@
   },
   "plugins": ["prettier", "eslint-plugin-import-helpers"],
   "rules": {
+    "prettier/prettier": "error",
     "import-helpers/order-imports": [
       "warn",
       {

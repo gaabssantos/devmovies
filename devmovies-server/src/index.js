@@ -1,9 +1,20 @@
+import cors from 'cors';
 import express from 'express';
+
+import { connectDatabase } from './database/db.js';
+import routes from './routes.js';
 
 const app = express();
 const port = 3333;
+
+app.use(cors());
 app.use(express.json());
+app.use(routes);
 
-app.get('/', (_, res) => res.json('Hello world!'));
-
-app.listen(port, () => console.log(`Server has started in port ${port}.`));
+connectDatabase()
+  .then(() => {
+    app.listen(port, () => console.log(`Server has started in port ${port}.`));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
