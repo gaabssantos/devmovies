@@ -4,6 +4,7 @@ import {
   createMovie,
   deleteMovie,
   updateMovie,
+  getMoviesAndCategories,
 } from './controllers/MovieController.js';
 
 import {
@@ -15,6 +16,7 @@ import {
 
 const routes = Router();
 
+routes.get('/movies-categories', getMoviesAndCategories);
 routes.get('/movies', getMovies);
 routes.post('/movies', createMovie);
 routes.delete('/movies/:id', deleteMovie);

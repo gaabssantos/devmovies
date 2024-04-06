@@ -1,9 +1,17 @@
 import Movie from '../models/MovieModel.js';
+import Category from '../models/CategoryModel.js';
 
 export const getMovies = async (_, res) => {
   const movies = await Movie.find();
 
   return res.status(200).json(movies);
+};
+
+export const getMoviesAndCategories = async (_, res) => {
+  const movies = await Movie.find();
+  const categories = await Category.find();
+
+  return res.status(200).json({ movies, categories });
 };
 
 export const createMovie = async (req, res) => {
