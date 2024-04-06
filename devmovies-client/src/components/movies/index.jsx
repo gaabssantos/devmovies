@@ -28,10 +28,8 @@ export const Movies = ({ data, handleVideo }) => {
   return (
     <C.Container>
       {data?.categories?.map((category) => (
-        <>
-          <C.Text key={category?.name} id={category?.type}>
-            {category?.name}
-          </C.Text>
+        <div key={category?.name}>
+          <C.Text id={category?.type}>{category?.name}</C.Text>
           <Carousel responsive={responsive}>
             {getMovies(category?.type).map((data, index) => (
               <C.Movie
@@ -42,7 +40,7 @@ export const Movies = ({ data, handleVideo }) => {
               />
             ))}
           </Carousel>
-        </>
+        </div>
       ))}
 
       <C.Text id="all">All</C.Text>
