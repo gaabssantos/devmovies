@@ -1,6 +1,6 @@
 <h1>DevMovies</h1>
 
-<p>Um site para mostrar catálogos de filme, utilizando uma API..</p>
+<p>Um site para mostrar catálogos de filme, utilizando uma API...</p>
 
 <h2>🖥️ Stacks</h2>
 
