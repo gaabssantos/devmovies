@@ -11,7 +11,6 @@
   <li>Styled Components</li>
   <li>Axios</li>
   <li>Vime</li>
-  <li>Axios</li>
   <li>React Icons</li>
   <li>React Multi Carousel</li>
 </ul>
