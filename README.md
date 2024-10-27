@@ -17,7 +17,7 @@
 </ul>
 
 <h1>🌐 Deploy</h1>
-[Clique aqui para visisar o site](https://devmovies-kappa.vercel.app)
+[Documentação completa](https://seuprojeto.com/docs)
 
 <h1>🖼️ Imagens</h1>
 
