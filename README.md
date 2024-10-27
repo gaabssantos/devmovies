@@ -17,7 +17,7 @@
 </ul>
 
 <h1>🌐 Deploy</h1>
-This site was built using [GitHub Pages](https://pages.github.com/).
+<a href="https://devmovies-kappa.vercel.app">Clique aqui para visitar meu projeto!</a>
 
 <h1>🖼️ Imagens</h1>
 
