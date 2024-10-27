@@ -17,7 +17,7 @@
 </ul>
 
 <h1>🌐 Deploy</h1>
-[Documentação completa](https://seuprojeto.com/docs)
+This site was built using [GitHub Pages](https://pages.github.com/).
 
 <h1>🖼️ Imagens</h1>
 
